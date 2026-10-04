@@ -1,0 +1,139 @@
+/* CompanySearchPanel.module.css */
+
+.panel {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 24px 28px;
+  margin-top: 32px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1f2328;
+  margin: 0 0 4px;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: #57606a;
+  margin: 0 0 16px;
+}
+
+/* ── Search bar ────────────────────────────────── */
+.searchRow {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.input {
+  flex: 1;
+  max-width: 280px;
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  outline: none;
+  color: #1f2328;
+  background: #f6f8fa;
+  transition: border-color 0.15s;
+}
+
+.input:focus {
+  border-color: #0969da;
+  background: #ffffff;
+}
+
+.button {
+  padding: 8px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  background: #1d4ed8;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.button:hover:not(:disabled) {
+  background: #1e40af;
+}
+
+.button:disabled {
+  background: #93c5fd;
+  cursor: not-allowed;
+}
+
+/* ── State messages ────────────────────────────── */
+.hint {
+  margin-top: 20px;
+  font-size: 13px;
+  color: #8b949e;
+}
+
+.loading {
+  margin-top: 20px;
+  font-size: 13px;
+  color: #57606a;
+  font-style: italic;
+}
+
+.error {
+  margin-top: 16px;
+  font-size: 13px;
+  color: #cf222e;
+  background: #fff0f0;
+  border: 1px solid #ffb8b8;
+  border-radius: 6px;
+  padding: 10px 14px;
+}
+
+/* ── Result area ───────────────────────────────── */
+.result {
+  margin-top: 20px;
+}
+
+.quoteSummary {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.quoteName {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1f2328;
+}
+
+.quotePrice {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1f2328;
+}
+
+.quoteChange {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.pos { color: #1a7f37; }
+.neg { color: #cf222e; }
+
+.chartWrap {
+  background: #f6f8fa;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 16px;
+}
+
+.chartTitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: #57606a;
+  margin: 0 0 12px;
+}
