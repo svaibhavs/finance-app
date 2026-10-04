@@ -8,13 +8,14 @@
  *   7d      → WeekView         (compact cards + 7-day comparison chart)
  *   quarter → QuarterView      (normalised return chart + ranking table)
  */
-import TimeWindowTabs from '../TimeWindowTabs/TimeWindowTabs'
-import DaySummaryView from '../DaySummaryView/DaySummaryView'
-import WeekView       from '../WeekView/WeekView'
-import QuarterView    from '../QuarterView/QuarterView'
-import useDashboardStore from '../../state/dashboardStore'
-import { TIME_WINDOWS } from '../../constants/companies'
-import styles from './DashboardPage.module.css'
+import TimeWindowTabs      from '../TimeWindowTabs/TimeWindowTabs'
+import DaySummaryView      from '../DaySummaryView/DaySummaryView'
+import WeekView            from '../WeekView/WeekView'
+import QuarterView         from '../QuarterView/QuarterView'
+import CompanySearchPanel  from '../CompanySearchPanel/CompanySearchPanel'
+import useDashboardStore   from '../../state/dashboardStore'
+import { TIME_WINDOWS }    from '../../constants/companies'
+import styles              from './DashboardPage.module.css'
 
 function DashboardPage() {
   const selectedWindow = useDashboardStore((s) => s.selectedWindow)
@@ -38,6 +39,7 @@ function DashboardPage() {
         {selectedWindow === TIME_WINDOWS.DAY     && <DaySummaryView />}
         {selectedWindow === TIME_WINDOWS.WEEK    && <WeekView />}
         {selectedWindow === TIME_WINDOWS.QUARTER && <QuarterView />}
+        <CompanySearchPanel />
       </main>
     </div>
   )
