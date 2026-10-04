@@ -1,0 +1,19 @@
+﻿# Node
+finance-app/node_modules/
+finance-app/dist/
+
+# Local env
+finance-app/.env.local
+finance-app/*.env.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Bob workspace (local only)
+.bob/
+.vscode/

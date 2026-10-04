@@ -1,0 +1,177 @@
+.card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 18px 20px;
+  min-width: 210px;
+}
+
+.card.compact {
+  padding: 12px 16px;
+  min-width: 160px;
+}
+
+.card.loading,
+.card.errored {
+  opacity: 0.7;
+}
+
+/* ── Header ─────────────────────────────────────────── */
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  gap: 8px;
+}
+
+.ticker {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: #57606a;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.name {
+  display: block;
+  font-size: 12px;
+  color: #1f2328;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 130px;
+}
+
+/* ── State badge ─────────────────────────────────────── */
+.stateBadge {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 2px 7px;
+  border-radius: 20px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.stateOpen   { background: #dcfce7; color: #15803d; }
+.stateClosed { background: #f1f5f9; color: #57606a; }
+
+/* ── Price row ───────────────────────────────────────── */
+.priceRow {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1f2328;
+  line-height: 1;
+}
+
+.change {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.positive { color: #15803d; }
+.negative { color: #b91c1c; }
+
+/* ── OHLC meta grid ──────────────────────────────────── */
+.metaGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px 12px;
+  margin-bottom: 14px;
+  padding-top: 12px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.metaItem {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.metaLabel {
+  font-size: 10px;
+  font-weight: 600;
+  color: #8b949e;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.metaValue {
+  font-size: 12px;
+  font-weight: 500;
+  color: #1f2328;
+}
+
+/* ── 52-week range bar ───────────────────────────────── */
+.weekSection {
+  padding-top: 12px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.weekBar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.weekLabel {
+  font-size: 10px;
+  color: #8b949e;
+  white-space: nowrap;
+  min-width: 42px;
+}
+
+.weekLabel:last-child {
+  text-align: right;
+}
+
+.weekTrack {
+  position: relative;
+  flex: 1;
+  height: 4px;
+  background: #e5e7eb;
+  border-radius: 2px;
+}
+
+.weekFill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: #3b82d4;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.weekDot {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background: #1d4ed8;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px #1d4ed8;
+  transition: left 0.3s ease;
+}
+
+/* ── Loading / error ─────────────────────────────────── */
+.placeholder,
+.errorMsg {
+  display: block;
+  font-size: 13px;
+  color: #57606a;
+  margin-top: 8px;
+}
+
+.errorMsg { color: #b91c1c; }

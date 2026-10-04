@@ -1,0 +1,33 @@
+.view {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.intro {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 14px 18px;
+}
+
+.introText {
+  font-size: 13px;
+  color: #57606a;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.introText code {
+  background: #f1f5f9;
+  border-radius: 3px;
+  padding: 1px 5px;
+  font-size: 12px;
+  color: #1f2328;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
